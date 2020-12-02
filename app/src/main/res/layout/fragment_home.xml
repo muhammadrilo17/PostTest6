@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.HomeFragment">
+    <FrameLayout
+        android:id="@+id/tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="125dp"
+        android:elevation="2dp"
+        app:civ_border_color="@android:color/black"
+        app:civ_border_width="2dp"
+        android:src="@drawable/my_photo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_info" />
+
+    <TextView
+        android:id="@+id/name_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_name"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/nim_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_nim"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/name_result"
+        app:layout_constraintStart_toStartOf="@+id/name_result"
+        app:layout_constraintTop_toBottomOf="@+id/name_result" />
+
+    <ImageView
+        android:id="@+id/instagram"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/instagram"
+        app:layout_constraintTop_toBottomOf="@id/nim_result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/facebook"
+        android:contentDescription="@string/icon" />
+
+    <ImageView
+        android:id="@+id/facebook"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/facebook"
+        app:layout_constraintTop_toBottomOf="@id/nim_result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/instagram"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

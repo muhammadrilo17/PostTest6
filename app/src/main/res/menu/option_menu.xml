@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/Implicit"
+        android:title="Implicit"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/maps"
+                android:title="Maps" />
+            <item
+                android:id="@+id/browser"
+                android:title="Browser" />
+            <item
+                android:id="@+id/telephone"
+                android:title="Telephone" />
+            <item
+                android:id="@+id/message"
+                android:title="Message" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/Explicit"
+        android:title="Explicit"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/hitung"
+                android:title="hitung" />
+        </menu>
+    </item>
+</menu>
